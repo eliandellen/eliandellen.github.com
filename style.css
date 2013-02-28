@@ -563,7 +563,7 @@ p.wp-caption-text, .frame_caption {
 
 .main_mid {
 	background:url(images/main_bg_mid.png) center center repeat-y;
-	padding:0 59px; /* width 496px */
+	padding:-2 59px; /* width 496px */
 	min-height:630px}
 	
 /*----------------------------------------------*/
