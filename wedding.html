@@ -1,0 +1,190 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>We Are Getting Married</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link href="http://fonts.googleapis.com/css?family=Copse|Six+Caps|Source+Sans+Pro:400,700" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styles/beige-turqoise.css">
+<script src="js/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function () {
+	    $('.menuItem').click(function(){
+	    	$('.menuItem').removeClass('current-menu-ancestor');
+	        $(this).addClass('current-menu-ancestor');
+			var pageToShow = $(this).attr('id') + 'Page';
+			$('.page').hide();
+			$('#'+pageToShow+'').show();
+		})
+	});
+</script>
+
+</head>
+<body style="background:url(images/background.jpg) no-repeat center center fixed;   -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" > 
+ 
+<div class="body_wrap">
+
+<div class="main_outer">   
+ 	<div class="main_top"></div>
+    <div class="main_mid">
+    	
+        <!-- header -->
+        <div class="header">
+        	<div class="head_title">
+            	<h1>We Are Getting Married</h1>
+	            <p class="sub_title">SATURDAY, 27<sup>th</sup> APRIL 2013</p>
+            </div>
+            
+            <div class="head_names">
+            	<div class="head_name_left">
+            	<span class="head_name">
+            	     <strong>ELLEN</strong> <em>THOMAS</em>
+                </span>
+                </div>
+                <span class="head_amp"><img src="styles/beige-turqoise/head_amp.png" width="125" height="122" alt=""></span>                
+                <div class="head_name_right">
+                <span class="head_name">
+                     <strong>ELI</strong> <em>THOMAS</em>
+                </span>
+                </div>
+            </div>
+        </div>
+        <!-- header -->
+                
+        <!-- topmenu -->
+		<div class="topmenu_line_top"></div>    
+    	<nav id="topmenu">  
+        	<ul class="dropdown">   
+            	<li class="menu-level-0 menuItem current-menu-ancestor" id="home"><a href="javascript:void(0);"><span>HOME</span></a>
+            	<li class="menu-level-0 menuItem" id="information"><a href="javascript:void(0);"><span>INFORMATION</span></a></li>
+            	<li class="menu-level-0 menuItem" id="location"><a href="javascript:void(0);"><span>LOCATION</span></a>  
+                <li class="menu-level-0 menuItem" id="rsvp"><a href="javascript:void(0);"><span>RSVP</span></a></li>
+                <li class="menu-level-0 menuItem" id="registry"><a href="javascript:void(0);"><span>REGISTRY</span></a></li>
+			</ul>
+        </nav>
+        <div class="topmenu_line_bot"></div>
+		<!--/ topmenu -->    
+        
+        <!-- content -->
+      	<div id="content" class="content post-detail">
+    
+    
+    
+    
+	      		<!--- HOME --->
+	      		<div class="entry page" id="homePage">
+				        <div class="frame_box frame_big">
+				       	  	<video id="myvideo" width="450" height="253" poster="weddingVideoImage.png" controls="controls" preload="none">
+							    <source type="video/mp4" src="weddingVideo.mp4" />
+							</video>
+				            <span class="img_tl"></span><span class="img_tr"></span><span class="img_bl"></span><span class="img_br"></span>
+				        </div>
+				    <div class="clear"></div>
+				</div>
+				<!--- END HOME --->
+				
+				
+				
+				<!--- INFORMATION --->
+	      		<div class="entry page" id="informationPage" style="display:none">
+				        
+				</div>
+				<!--- END INFORMATION --->
+    
+    
+    
+	      		<!--- LOCATION --->
+	      		<div class="entry page" id="locationPage" style="display:none">
+				        <div class="frame_box frame_big">
+				        	<a href="http://maps.google.co.nz/maps?q=google+maps+sarnia+park&hl=en&ll=-37.917659,175.49612&spn=0.12662,0.264187&fb=1&gl=nz&hq=google+maps+sarnia+park&hnear=google+maps+sarnia+park&cid=0,0,6823409524163100069&t=m&z=13" target="_new">
+				       	  		<img src="images/map.jpg" onmouseover="this.src='images/mapHover.jpg'" onmouseout="this.src='images/map.jpg'"width="450" height="253" alt="" target="_new">
+				        	</a>
+				        </div>
+				        <h1>Sarnia Park</h1>
+						<div class="text_center">
+				        	<p><span class="text-black">151 Maungatautari Rd, Cambridge, NZ</span><br/>
+						</div>
+				       <div class="clear"></div>
+				</div>
+				<!--- END LOCATION --->
+				
+				
+				
+				
+				<!--- RSVP --->
+	      		<div class="entry page" id="rsvpPage" style="display:none">
+				  
+				</div>
+				<!--- END RSVP --->
+				
+				
+				
+				
+				<!--- Registry --->
+	      		<div class="entry page" id="registryPage" style="display:none">
+		                            
+		            <div class="bot_box">
+		            	<div class="bot_box_inner">
+		                    <span class="box_icon icon_gift"></span>
+							<p>We would love your help for our honeymoon!</p>
+		                </div>
+		            </div>
+	      			
+	      			<div class="divider_space_thin"></div>
+
+				    <div class="entry">
+						<!--<h1>We would love your help for our honeymoon!</h1> -->
+						<p></p>     
+						<p>We have set up a dedicated honeymoon fund, and we would love your help to pay for a week away in Adelaide as a wedding gift.</p>	
+						
+						<p>Here are some amazing things we would <strong>love</strong> to do with your help:</p>	
+
+						<p>
+							<ul>
+								<li>Return <a href="http://www.airnz.co.nz" target="_blank">Flights for 2</a> to Adelaide : $ 1500</li>
+								<li>Two night <a href="http://www.southaustralia.co.nz/suggested-trips/2-night-barossa-temptation/" target="_blank">Barossa Winary Tour</a> : $ 500</li>
+								<li>One night at <a href="http://www3.hilton.com/en/hotels/south-australia/hilton-adelaide-hotel-ADLHITW/accommodations/index.html" target="_blank">the Hilton</a> : $ 350</li>
+								<li>Shopping at the renown <a href="http://www.adelaidecentralmarket.com.au/" target="_blank">Adelaide Market</a> : $ 200</li>
+								<li>Dinner at <a href="http://www.auge.com.au/" target="_blank">Auge Ristorante</a> : $ 150</li>
+								<li>Dessert in <a href="https://maps.google.co.nz/maps?hl=en&safe=off&q=rundle+street&ie=UTF-8&hq=&hnear=0x6ab0c93470fa065f:0xbb237779d826d99e,Rundle+St,+SA,+Australia&gl=nz&ei=64guUa_3HO72mAWKn4CIAg&ved=0CIYBELYD" target="_blank">Rundle street</a> : $ 60</li>
+								<li>Picnic in the <a href="http://en.wikipedia.org/wiki/Adelaide_Botanic_Garden" target="_blank">Adelaide Botanic Gardens</a> : $ 50</li>
+								<li>Friday afternoon drink at the <a href="http://www.oostende.com.au/" target="_blank">Belgian Beer Cafe</a> : $ 20</li>
+							</ul>
+						</p>
+						
+						<p>To help us with out honey moon you can <a href="">click here</a> to donate or make a deposit straight into our honeymoon fund 12-3249-0135772-50 (Dont forget to use your name as the reference).</p>			
+						<p>Any donations made towards our honeymoon are kept <strong>secret</strong> from us until the day of our wedding!</p>			
+
+						<div class="clear"></div>
+					</div>
+		                    		
+		           
+				</div>
+				<!--- END RSVP --->
+				
+				
+				
+				
+        </div>
+        <!--/ content -->
+        
+    </div>
+    <div class="main_bot"></div>
+</div>
+
+</div>
+</body>
+</html>
