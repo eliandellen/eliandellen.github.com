@@ -563,8 +563,11 @@ p.wp-caption-text, .frame_caption {
 
 .main_mid {
 	background:url(images/main_bg_mid.png) center center repeat-y;
-	padding:-2 59px; /* width 496px */
+	padding:0 59px; /* width 496px */
+	margin-top: -5px;
+	margin-bottom: -5px;
 	min-height:630px}
+	
 	
 /*----------------------------------------------*/
 /* Header */
@@ -703,7 +706,8 @@ p.wp-caption-text, .frame_caption {
 	text-transform:uppercase;
 	font-size:12px;
 	text-align:center;
-	background-color:#fff}
+	/*background-color:#fff*/
+	}
 
 .dropdown li {
 	display:inline-block;
