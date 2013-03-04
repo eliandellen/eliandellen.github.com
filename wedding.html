@@ -12,13 +12,16 @@
 <script>
 	$(document).ready(function () {
 	    $('.menuItem').click(function(){
-	    	$('.menuItem').removeClass('current-menu-ancestor');
-	        $(this).addClass('current-menu-ancestor');
-			var pageToShow = $(this).attr('id') + 'Page';
-			$('.page').hide();
-			$('#'+pageToShow+'').show();
-		})
+	    	showPage($(this).attr('id'));
+		})		
 	});
+	
+	function showPage(pageToShow){
+		$('.menuItem').removeClass('current-menu-ancestor');
+		$('#'+pageToShow+'').addClass('current-menu-ancestor');		
+		$('.page').hide();
+		$('#'+pageToShow+'Page').fadeIn('200');
+	}
 </script>
 
 </head>
@@ -58,8 +61,10 @@
     	<nav id="topmenu">  
         	<ul class="dropdown">   
             	<li class="menu-level-0 menuItem current-menu-ancestor" id="home"><a href="javascript:void(0);"><span>HOME</span></a>
-            	<li class="menu-level-0 menuItem" id="information"><a href="javascript:void(0);"><span>INFORMATION</span></a></li>
-            	<li class="menu-level-0 menuItem" id="location"><a href="javascript:void(0);"><span>LOCATION</span></a>  
+            	<li class="menu-level-0 menuItem" id="theday"><a href="javascript:void(0);"><span>THE DAY</span></a></li>
+            	<li class="menu-level-0 menuItem" id="accommodation"><a href="javascript:void(0);"><span>ACCOMMODATION</span></a></li>
+            	<li class="menu-level-0 menuItem" id="location"><a href="javascript:void(0);"><span>LOCATION</span></a> 
+            	<li class="menu-level-0 menuItem" id="menu"><a href="javascript:void(0);"><span>MENU</span></a></li>
                 <li class="menu-level-0 menuItem" id="rsvp"><a href="javascript:void(0);"><span>RSVP</span></a></li>
                 <li class="menu-level-0 menuItem" id="registry"><a href="javascript:void(0);"><span>REGISTRY</span></a></li>
 			</ul>
@@ -87,19 +92,42 @@
 				
 				
 				
-				<!--- INFORMATION --->
-	      		<div class="entry page" id="informationPage" style="display:none">
+				<!--- The Day --->
+	      		<div class="entry page" id="thedayPage" style="display:none">
+					We ask that guests please arrive at <strong>2pm</strong> for the 2.30pm start.<br/><br/>
+
+
+					A bus has been organised to transport guests from Hamilton CBD (outside Novotel hotel) to Sarnia Park, and back again at the end of the night.<br/>
+					A cost of $15pp return will cover the service.<br/>
+					The bus will depart from the Novotel at <strong>1.20pm</strong> and return from Sarnia Park at <strong>midnight</strong>.<br/>
+					If you are interested in taking this bus please let us know when you <a href="javascript:(showPage('rsvp'))">RSVP</a>.<br/><br/>
+
+					<strong>Dress Code</strong> : Formal, classy - this is your excuse to get dressed up!
+				</div>
+				<!--- END The Day --->
+    
+    
+				<!--- ACCOMODATION --->
+	      		<div class="entry page" id="accommodationPage" style="display:none">
+				        The Novotel and Ibis hotels are located in the Hamilton CBD and are offering deals for our guests.<br/><br/>
+				        <strong>Ibis Tainui Hamilton</strong><br/>
+				        $89.00 Standard King, Queen or Single Room<br/><br/>
+				        <strong>Novotel Tainui Hamilton</strong><br/>
+				        $149.00 Superior King or Twin Room<br/><br/>
+				        To book a room please call <a href="tel:+6478381366">(07) 838 1366</a> and quote the following code : <strong>WED270413</strong><br/><br/>
+				        There are also many B&Bs and motels in Cambridge if you would like accommodation closer to the venue. A good website to check is <a href="http://www.accommodationcambridge.co.nz/" target="_blamk" >www.accommodationcambridge.co.nz</a><br/><br/>
 				        
 				</div>
-				<!--- END INFORMATION --->
-    
-    
+				<!--- END ACCOMODATION --->
+				
+				
+				
     
 	      		<!--- LOCATION --->
 	      		<div class="entry page" id="locationPage" style="display:none">
 				        <div class="frame_box frame_big">
 				        	<a href="http://maps.google.co.nz/maps?q=google+maps+sarnia+park&hl=en&ll=-37.917659,175.49612&spn=0.12662,0.264187&fb=1&gl=nz&hq=google+maps+sarnia+park&hnear=google+maps+sarnia+park&cid=0,0,6823409524163100069&t=m&z=13" target="_new">
-				       	  		<img src="images/map.jpg" onmouseover="this.src='images/mapHover.jpg'" onmouseout="this.src='images/map.jpg'"width="450" height="253" alt="" target="_new">
+				       	  		<img src="images/mapHover.jpg" onmouseover="this.src='images/map.jpg'" onmouseout="this.src='images/mapHover.jpg'"width="450" height="253" alt="" target="_new">
 				        	</a>
 				        </div>
 				        <h1>Sarnia Park</h1>
@@ -112,9 +140,30 @@
 				
 				
 				
+				<!--- MENU --->
+	      		<div class="entry page" id="menuPage" style="display:none">
+				  	<h1>Menu</h1>
+				  	Please chose one entree and one main per guest and inform us of your choices when you <a href="javascript:(showPage('rsvp'))">RSVP</a>. If you have any special dietary requirements please advise us of these too.<br/><br/>
+				  	<h1>Entree</h1>
+				  	Spiced pumpkin bisque with roasted pumpkin seeds and char - grilled garlic bread<br/>
+				  	-<br/>
+				  	Salad of mulled wine poached pear, roasted beetroot, blue vein cheese, candied walnuts & walnut vinaigrette<br/><br/>
+				  	<h1>Main</h1>
+				  	Hereford prime beef with roasted mushroom, Dauphinois potatoes, green pea salsa & bearnaise<br/>
+				  	-<br/>
+				  	Slow-roasted chicken with sweet corn polenta cake, truffle pea salsa & charred red pepper sauce<br/><br/>
+				</div>
+				<!--- END MENU --->
+				
+				
 				
 				<!--- RSVP --->
 	      		<div class="entry page" id="rsvpPage" style="display:none">
+				  
+		      		Please RSVP by <strong>Saturday, 23 March</strong><br/>
+		      		By Email : <a href="mailto:ellielthomas@gmail.com?Subject=Wedding%20RSVP">ellielthomas@gmail.com</a> <br/>
+		      		or by calling <a href="tel:+64274246635">027 424 6645</a>
+				 
 				  
 				</div>
 				<!--- END RSVP --->
@@ -128,47 +177,42 @@ accomodation closer to the venue. www.accomodationcambridge.co.nz is a good webs
 				<!--- END ACCOMODATION --->
 				
 				
-				<!--- Registry --->
+				<!--- REGISTRY --->
 	      		<div class="entry page" id="registryPage" style="display:none">
 		                            
-		            <div class="bot_box">
+		            <div class="bot_box" style="margin-top:-35px;">
 		            	<div class="bot_box_inner">
 		                    <span class="box_icon icon_gift"></span>
-							<p>We would love your help for our honeymoon!</p>
+							<p>We would love your help with our honeymoon!</p>
 		                </div>
 		            </div>
 	      			
 	      			<div class="divider_space_thin"></div>
 
 				    <div class="entry">
-						<!--<h1>We would love your help for our honeymoon!</h1> -->
 						<p></p>     
-						<p>We have set up a dedicated honeymoon fund, and we would love your help to pay for a week away in Adelaide as a wedding gift.</p>	
+						<p>We are planning a week away in Adelaide for our honeymoon.<br/> As our gift registry we have set up a dedicated honeymoon fund.</p>	
 						
-						<p>Here are some amazing things we would <strong>love</strong> to do with your help:</p>	
+						<p><a href="javascript:(alert('Coming Soon'));">Click here to give a gift.</a></p>
+						
+						<p>Here are some of the amazing things we would <strong>love</strong> to do with your help:</p>							
 
 						<p>
 							<ul>
-								<li>Friday afternoon drink at the <a href="http://www.oostende.com.au/" target="_blank">Belgian Beer Cafe</a> : $ 20</li>
-								<li>Picnic in the <a href="http://en.wikipedia.org/wiki/Adelaide_Botanic_Garden" target="_blank">Adelaide Botanic Gardens</a> : $ 50</li>
-								<li>Dessert in <a href="https://maps.google.co.nz/maps?hl=en&safe=off&q=rundle+street&ie=UTF-8&hq=&hnear=0x6ab0c93470fa065f:0xbb237779d826d99e,Rundle+St,+SA,+Australia&gl=nz&ei=64guUa_3HO72mAWKn4CIAg&ved=0CIYBELYD" target="_blank">Rundle street</a> : $ 60</li>
-								<li>Dinner at <a href="http://www.auge.com.au/" target="_blank">Auge Ristorante</a> : $ 150</li>
-								<li>Shopping at the renown <a href="http://www.adelaidecentralmarket.com.au/" target="_blank">Adelaide Market</a> : $ 200</li>
-								<li>One night at <a href="http://www3.hilton.com/en/hotels/south-australia/hilton-adelaide-hotel-ADLHITW/accommodations/index.html" target="_blank">the Hilton</a> : $ 350</li>
-								<li>Two night <a href="http://www.southaustralia.co.nz/suggested-trips/2-night-barossa-temptation/" target="_blank">Barossa Winary Tour</a> : $ 500</li>
-								<li>Return <a href="http://www.airnz.co.nz" target="_blank">Flights for 2</a> to Adelaide : $ 1500</li>
+								<li>Drinks at the Belgian Beer Cafe</li>
+								<li>Picnic in the Adelaide Botanic Gardens</li>
+								<li>Dessert in Rundle Street</li>
+								<li>Dinner at Auge Ristorante</li>
+								<li>Shopping at the Adelaide Markets</li>
+								<li>A few nights at the Hilton hotel</li>
+								<li>A Barossa vinyard tour</li>
+								<li>Return flights to Adelaide</li>
 							</ul>
 						</p>
-						
-						<p>To help us with our honeymoon you can <a href="">click here</a> to donate or make a deposit straight into our honeymoon fund 12-3249-0135772-50 (Dont forget to use your name as the reference).</p>			
-						<p>Any donations made towards our honeymoon are kept <strong>secret</strong> from us until the day of our wedding!</p>			
-
 						<div class="clear"></div>
 					</div>
-		                    		
-		           
 				</div>
-				<!--- END RSVP --->
+				<!--- END REGISTRY --->
 				
 				
 				
